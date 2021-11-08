@@ -1,13 +1,9 @@
-tup1 = ()
-tup2  = tuple()
+a = input("enter a number: ")
 
-tup3 =1,
+b = tuple(a)
 
-tup4 = (1,2,3,4)
+count = 0
 
-print(tup4.index(1))
-
-print(tup4.count(1))
-
-print(sorted(tup4)) # it return a list output
-
+for i in b:
+    print('tuple',count,i)
+    count= count+1
