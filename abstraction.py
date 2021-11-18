@@ -28,9 +28,6 @@ class child(Absclass):
     def m2(self):
         print("m2--child")
 
-    def m3(self):
-        print("m3--child")
-
     def m4(self,surename):
         print("surenamnme", surename)
 
@@ -38,4 +35,4 @@ class child(Absclass):
 
 obj = child()
 obj.m4("ingle")
-
+obj.m1()
