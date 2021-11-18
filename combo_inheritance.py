@@ -1,107 +1,62 @@
-class A:
-    x = 10
-    y = 20
-
+class Product1:
+    def __init__(self,name):
+        self.name = name
     def m1(self):
-        print("m1--A")
+        print(self.name)
+
+class Product2:
+    def __init__(self,middlename):
+        self.middlename = middlename
 
     def m2(self):
-        print("m2--A")
+        print(self.middlename)
 
-class B:
-    p = 23
-    q = 33
+class Product3(Product1,Product2):
+    def __init__(self,Surename):
+        self.surename = Surename
 
     def m3(self):
-        print("m3--B")
+        print(self.surename)
+
+class Product4(Product3):
+    def __init__(self,Sister):
+        self.sister = Sister
 
     def m4(self):
-        print("m4--B")
+        print(self.sister)
 
-class C(A,B):
-    a=11
-    z =14
+class Product5(Product4):
+    def __init__(self,Brother):
+        self.brother = Brother
+
+    def m4(self):
+        print(self.brother)
+
+class Product6(Product5):
+    def __init__(self,Niece):
+        self.niece = Niece
 
     def m5(self):
-        print("m5--C")
+        print(self.niece)
+
+class Product7(Product5):
+    def __init__(self,grand_mother="sangita"):
+        self.grand_mother = grand_mother
 
     def m6(self):
-        print("m6--C")
+        print(self.grand_mother)
 
 
-
-class D(C):
-    w= 34
-    r= 44
+class Product8(Product7,Product6):
+    def __init__(self,grand_father):
+        self.grand_father = grand_father
 
     def m7(self):
-        print("m7--D")
-
-    def m8(self):
-        print("m8--D")
+        print(self.grand_father)
 
 
-class E(D):
-    r=22
-    k=31
-    def m9(self):
-        print("m9--E")
 
-    def m10(self):
-        print("m10--E")
+p = Product8('bankat')
+p.m7()
+print(p.grand_mother)
 
-
-class F(E):
-    g=12
-    f=54
-
-    def m12(self):
-        print("m12--F")
-
-    def m10(self):
-        print("m10--F")
-
-class G(E):
-    e=44
-    h=54
-
-    def m12(self):
-        print("m12--G")
-
-    def m8(self):
-
-        print("m8--G")
-
-
-class H(F,E):
-    r =33
-    n=76
-
-    def m15(self):
-        print("m15--H")
-
-    def m16(self):
-        print("m16--H")
-
-class I(H):
-    b = 32
-    m = 54
-
-    def m17(self):
-        print("m17--I")
-
-    def m18(self):
-        print("m18--I")
-
-class J(H):
-    o = 65
-    v=44
-
-    def m18(self):
-        print("m18--J")
-
-    def m19(self):
-        print("m19--J")
-
-
-j=J()
