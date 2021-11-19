@@ -1,32 +1,54 @@
-class A:
-    x = 10
 
-    def m1(self):
-        print("class a fun")
+from abc import ABC, abstractmethod
 
-class B(A):
+class DB(ABC):
+    @abstractmethod
+    def commit(self):
+        pass
 
-    def f2(self):
-        print("class b fun")
-        print(self.x)
-        self.m1()
+    @abstractmethod
+    def rollback(self):
+        pass
+    @abstractmethod
+    def insert(self):
+        pass
+    @abstractmethod
+    def update(self):
+        print("update")
 
-b = B()
-b.f2()
+    def delete(self):
+        print("delete")
+
+class Mysql(DB):
+    def commit(self):
+        print("commit")
+
+    def rollback(self):
+        print("rollback")
+
+    def insert(self):
+        print("imsert")
+    def update(self):
+        print("update")
 
 
+class Oracle(DB):
+    def commit(self):
+        print("commit")
+
+    def rollback(self):
+        print("rollback")
+
+    def insert(self):
+        print("imsert")
+
+    def update(self):
+        print("update")
+
+    def delete(self):
+        print("oracle delete")
+        super().update()
 
 
-class X:
-        def __init__(self):
-            print("class a constructor")
-
-class Y(X):
-        def __init__(self):
-            print("class b constructor")
-            super().__init__()
-
-x= Y()
-
-
-
+obj1 = Oracle()
+obj1.delete()
