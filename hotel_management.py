@@ -101,6 +101,9 @@ while True:
 
     elif choice == 6:
         obj1.bill_total()
+
+
+    elif choice==7:
         break
 
 

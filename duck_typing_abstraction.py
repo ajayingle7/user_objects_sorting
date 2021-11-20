@@ -1,33 +1,76 @@
-from abc import ABC,abstractmethod
 
-class DB(ABC):
-    @abstractmethod
-    def commit(self):
-        pass
+class IICMR:
 
-    @abstractmethod
-    def rollback(self):
-        pass
+    def MCA(self):
+        mca = "master of computer application"
+        return mca
+    def MBA(self):
+        mba = "master of busniness administration"
+        return mba
+    def BBA(self):
+        bba = "bachlore of business administration"
+        return bba
 
-class Oracle(DB):
+class DYPATIL:
+    def MCA(self):
+        mca = "master of computer application"
+        return mca
 
-    def commit(self):
-        print("commit--oracle")
+    def MBA(self):
+        mba = "master of busniness administration"
+        return mba
 
-    def rollback(self):
-        print("rollback--oracle")
+    def BBA(self):
+        bba = "bachlore of business administration"
+        return bba
 
 
-class Mysql(DB):
-    def commit(self):
-        print("commit--mysql")
+class JSPM:
+    def MCA(self):
+        mca = "master of computer application"
+        return mca
 
-    def rollback(self):
-        print("rollback--mysql")
+    def MBA(self):
+        mba = "master of busniness administration"
+        return mba
 
-def connect(para):
-    para.commit()
-    para.rollback()
+    def BBA(self):
+        bba = "bachlore of business administration"
+        return bba
 
-connect(Oracle())
-connect(Mysql())
+class SYMBOSYS:
+    def MCA(self):
+        mca = "master of computer application"
+        return mca
+
+    def MBA(self):
+        mba = "master of busniness administration"
+        return mba
+
+    def BBA(self):
+        bba = "bachlore of business administration"
+        return bba
+class IMCC:
+    def MCA(self):
+        mca = "master of computer application"
+        return mca
+
+    def MBA(self):
+        mba = "master of busniness administration"
+        return mba
+
+    def BBA(self):
+        bba = "bachlore of business administration"
+        return bba
+
+
+def myfun(obj):
+    print(obj.MCA())
+    print(obj.MBA())
+    print(obj.BBA())
+
+myfun(IMCC())
+myfun(IICMR())
+myfun(JSPM())
+myfun(DYPATIL())
+myfun(SYMBOSYS())
