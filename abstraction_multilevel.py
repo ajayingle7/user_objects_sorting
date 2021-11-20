@@ -80,4 +80,4 @@ obj2.exam()
 obj3 = IICMR()
 obj3.exam()
 
-
+print(di)

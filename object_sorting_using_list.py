@@ -16,3 +16,5 @@ list1 = [s1,s2]
 list1.sort(key=lambda a:a.name)
 for i in list1:
     print(i)
+
+print(dir(s1))
