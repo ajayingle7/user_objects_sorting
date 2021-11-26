@@ -9,6 +9,10 @@ class Student():
     def m2(self):
         return self._name
 
+    def __str__(self):
+        return f"{self._name}"
+
+
 class Display(Student):
     def m1(self):
         super()._m1()
@@ -17,3 +21,4 @@ class Display(Student):
 
 obj1 = Display()
 obj1.m1()
+print(obj1)

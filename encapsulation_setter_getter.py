@@ -1,3 +1,4 @@
+
 class Myclass:
 
     def setname(self,name):
@@ -12,10 +13,14 @@ class Myclass:
     def getroll(self):
         return self.__roll
 
+    def _m1(self):
+        print("m1___A")
+
+
 obj1 = Myclass()
 obj1.setname("AJay")
 obj1.setroll(23)
 
 print(obj1.getname())
 print(obj1.getroll())
-print(dir(obj1))
+obj1._m1()
