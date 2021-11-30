@@ -7,9 +7,9 @@ def m1(mno):
         raise KeyError("enter 10 digits")
 
 try:
-
     mno = input("enter a mno: ")
     m1(mno)
 
 except Exception as msg:
     print(msg)
+
