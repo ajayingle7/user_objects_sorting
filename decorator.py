@@ -1,37 +1,23 @@
 def deco(fun):
-    def inn(a,b):
-        if b==0:
-            raise ZeroDivisionError("cant divide by zero")
+    def inner(*prices):
+        total  = fun(*prices)
+        discount = total*0.3
+        total_amt = total-discount
 
-        else:
-            print(a/b)
-
-    return inn
-
-def deco2(fun):
-    def inn(*num):
-        total = fun(*num)
-        final_amt = total/2
-        return final_amt
-    return inn
+        return total_amt
+    return inner
 
 
 
+@deco
+def bill(*prices):
 
-@deco                             #decorator
-def m1(a,b):
-    print(a/b)
+    sum = 0
 
-m1(10,12)
-
-
-
-@deco2
-def m2(*num):
-    sum =0
-    for i in num:
+    for i in prices:
         sum+=i
-
     return sum
 
-print("total is: ", m2(10,20,50,852))
+print("total bill is: ", bill(100,55,255))
+
+
