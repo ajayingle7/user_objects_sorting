@@ -1,3 +1,6 @@
-hello ajay
-hello vijay
-hello sachin
+SUNDAYMONDAY
+ TUESDAY
+ WEDNSEDAY
+ THURSEDAY
+ FRIDAY
+ SATUARDAY
