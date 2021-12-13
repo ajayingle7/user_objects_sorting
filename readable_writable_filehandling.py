@@ -1,3 +1,13 @@
+with open("text1.txt","rt") as fb:
+    print(fb.read())
+
+
+
+
+
+
+
+
 f= open("text1.txt",'rt')
 
 try:
@@ -21,4 +31,7 @@ try:
 
 finally:
     f.close()
+
+
+
 
