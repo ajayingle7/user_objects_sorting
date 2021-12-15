@@ -1,4 +1,4 @@
-def deco(fun):
+'''def deco(fun):
     def inner(*prices):
         total  = fun(*prices)
         discount = total*0.3
@@ -18,6 +18,33 @@ def bill(*prices):
         sum+=i
     return sum
 
-print("total bill is: ", bill(100,55,255))
+print("total bill is: ", bill(100,55,255))'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
