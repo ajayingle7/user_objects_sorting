@@ -159,30 +159,32 @@ while i<10:
 L = [1, 3, 5, 7, 9]
 print(L.pop(-3), end = '  ')
 print(L.remove(L[0]), end = '  ')
-print(L)'''
+print(L)
 
 
-
-print(10%3)
-
-
-
-
+L= [1,3,5,7,9]
+print(L.pop(-3),  end = ' ' )
+print(L.remove(L[0]),end=' ')
+print(L)
 
 
+def m1(L):
+    L.reverse()
+    return L
+
+def m2(L):
+    list1 = list()
+    list1.extend(m1(L))
+    print(list1)
 
 
+L = [1,3.1,5.3,7.531]
+m2(L)
 
 
-
-
-
-
-
-
-
-
-
+D = {1 : 1, 2 : '2', '1' : 1, '2' : 3}
+D['1'] = 2
+print(D[D[D[str(D[1])]]])'''
 
 
 
